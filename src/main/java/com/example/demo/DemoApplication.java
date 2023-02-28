@@ -1,13 +1,14 @@
 package com.example.demo;
 
+import com.example.demo.EntityLocker;
 
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		
-		//  Here's how we can use the EntityLocker class in our  application:
+//  Here's how we can use the EntityLocker class in our  application:
 
-                   EntityLocker locker = new EntityLocker();
+ EntityLocker locker = new EntityLocker();
 
 // here protected code for entity with ID "entity1"
 locker.executeProtectedCode("entity1", () -> {
@@ -18,10 +19,7 @@ locker.executeProtectedCode("entity1", () -> {
 locker.executeProtectedCode(123, () -> {
     // do something with entity2
 });
-		
-		
-		
-		
+			
 	}
 
 }
