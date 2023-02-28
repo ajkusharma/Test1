@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
@@ -18,19 +20,5 @@ public class EntityLocker {
 }
 
 
-//  Here's how we can use the EntityLocker class in our  application:
-
-
-EntityLocker locker = new EntityLocker();
-
-// here protected code for entity with ID "entity1"
-locker.executeProtectedCode("entity1", () -> {
-    // do something with entity1
-});
-
-// given protected code for entity with ID 123
-locker.executeProtectedCode(123, () -> {
-    // do something with entity2
-});
 
 
